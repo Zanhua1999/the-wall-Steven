@@ -1,0 +1,42 @@
+<?php
+while ($succes = $stmt2->fetch()) {
+            echo $likes;
+        
+        }
+ ?>
+
+
+
+
+   
+if (isset($_POST['like'])) 
+{
+    $mysqli2 = new mysqli('localhost', 'root', 'root', 'the-wall') or die ('Error connecting');
+$query2 = "SELECT _like FROM likes WHERE post_img = '$img'";
+$stmt2 = $mysqli2->prepare($query2) or die ('1');
+$stmt2->bind_result($likes) or die ('binding result');
+$stmt2->execute() or die ('Error excecuting');
+
+$newlike;
+
+while ($row = $stmt2->fetch()) 
+{
+    $newlike = $row + 1;
+    echo $newlike;
+}
+
+$mysqli8 = new mysqli('localhost', 'root', 'root', 'the-wall') or die ('Error connecting');
+$query4 = "UPDATE likes SET _like = ? WHERE post_img = ?";
+$stmt3 = $mysqli8->prepare($query4) or die ('2');
+$stmt3->bind_param('is', $newlike, $target_location) or die ('Error bind param');
+$stmt3->execute() or die ('Error inserting comment in database');
+$stmt3->close();
+
+
+
+$query2 = "SELECT * FROM likes";
+$query3 = "INSERT INTO likes VALUES (0,?,?)";
+$stmt2 = $mysqli->prepare($query3) or die ('Error preparing');
+$stmt2->bind_param('is', $like, $target_location) or die ('Error bind param');
+$stmt2->execute() or die ('Error inserting comment in database');
+$stmt2->close();

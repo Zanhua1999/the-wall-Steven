@@ -1,0 +1,230 @@
+#particles-js {
+    z-index: -1;
+    background:#262626;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+#top_bar {
+    color: white; 
+    height: auto;
+    width: 100%;
+    margin-left: 0px;
+    position: relative;
+}
+
+#title_icon {
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#title {
+    display: inline;
+    font-size: 4em;
+    animation-name: siteIntro;
+    animation-duration: 2s;
+    text-shadow: 0px 0px 3px white;
+}
+
+#upload_button:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+@keyframes siteIntro {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+li {
+    display: inline;
+    padding: 0 10px;
+}
+
+#content_bar {
+    width: 80%;
+    margin-left: 0px;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid white;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+.sorting_button:hover {
+    color: black;
+    background-color: white;
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+}
+
+#old_to_new {
+    display: none;
+}
+
+#function_bar{
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+
+}
+
+body {
+    position: flex;
+    margin: 0;
+    background-color: transparent;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Chrome all / Safari all */ 
+    -moz-user-select: none; /*FireFox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+#up{
+    display: none;
+    position: relative;
+    color: white;
+    margin: 10px 20px;
+    height: auto;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(75, 75, 75, 0.3);
+    font-size: 1em;
+    max-width: 80%;
+    padding: 0;
+    
+}
+
+.text_input {
+    font-size: 1em;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+#text_box {
+    margin-top: 1px;
+}
+
+#select_file {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 1em;
+    padding: 0 20px;
+    color: white;
+    transition: color 2s;
+    transition-delay: background-color 1s;
+}
+
+#select_file:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+#send_button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 20px;
+    color: white;
+    transition: color 2s;
+    transition-delay: background-colo r 1s;
+    vertical-align: middle;
+}
+
+#send_button:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.post_frame {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post_frame:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.pic_frame {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.title_frame {
+    margin-left: 20px;
+    font-size: 1.5em;
+    width: 75%;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+.stat_frame {
+    flex-direction: row;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+}
+
+.script_frame {
+    margin-top: 10px;
+    max-height: 100px;
+    color: rgb(255, 255, 255);
+    overflow: show;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+#comment_box {
+    width: 600px;
+    height: 100px;
+    padding: 10px;
+    border-left: 6px solid firebrick;
+    background-color: #F5F5F5;
+    color: #3B3C36;
+
+}
+#comment_submit {
+    width: 80px;
+    height: 30px;
+    background-color: #F5F5F5;
+    border-style: ridge;
+    flex-direction: row;
+    flex-direction: column-reverse;
+
+}
+#Up_Bit {
+    background-image: url( 
+        'https://imgur.com/KuwreHW'); 
+                    background-size: cover; 
+                    width: 300px; 
+                    height: 200px; 
+                    font-size: 2rem; 
+}

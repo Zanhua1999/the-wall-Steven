@@ -1,0 +1,13 @@
+body{
+    color:white;
+    background-color: black;
+}
+#con{
+    z-index: +1;
+    display: grid;
+    float: right;
+}
+#text{
+    display: grid;
+    float: right;
+}

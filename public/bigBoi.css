@@ -1,0 +1,387 @@
+#particles-js {
+    z-index: -1;
+    background:#262626;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+form {
+    margin: 0;
+}
+
+#top_bar {
+    color: white; 
+    height: auto;
+    width: 80%;
+    margin-left: 15px;
+    position: relative;
+    top: 0;
+}
+
+#upload_icon {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+#title_icon {
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+#title {
+    display: inline;
+    font-size: 4em;
+    animation-name: siteIntro;
+    animation-duration: 2s;
+    text-shadow: 0px 0px 3px white;
+}
+
+#upload_button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 17px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    transition: color 1s, background-color 1s;
+    z-index: 2;
+}
+
+#upload_button:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+@keyframes siteIntro {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+li {
+    display: inline;
+    padding: 0 10px;
+}
+
+#content_bar {
+    width: 50%;
+    margin-left: 15px;
+    height: 80%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#content_bar::-webkit-scrollbar {
+    display: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout_button {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 10px;
+    font-size: 1.2em;
+    padding: 5px 0;
+    transition: background-color 1s, color 1s;
+    width: 120px;
+}
+
+.layout_button:hover {
+    color: black;
+    background-color: white;
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+}
+
+.sorting_button {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 0;
+    font-size: 1.2em;
+    padding: 5px 0;
+    transition: background-color 1s, color 1s;
+    width: 120px;
+}
+
+.sorting_button:hover {
+    color: black;
+    background-color: white;
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+}
+
+#cool {
+    display: none;
+}
+
+#old_to_new {
+    display: none;
+}
+
+#function_bar{
+    margin-left: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1a);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 80%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    background-color: transparent;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Chrome all / Safari all */ 
+    -moz-user-select: none; /*FireFox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}
+
+#up{
+    display: none;
+    position: relative;
+    color: white;
+    margin: 10px 20px;
+    height: 210px;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(75, 75, 75, 0.3);
+    font-size: 1em;
+    max-width: 80%;
+    padding: 0;
+    overflow: hidden;
+    transition-delay: 0.5s;
+}
+
+.text_input {
+    font-size: 1em;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.comment_input {
+    font-size: 1em;
+    width: 75%;
+    height: auto;
+    padding: 20px 10px;
+    margin: 0 0 10px 12.5%;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    transition: width 1s ease, margin 1s ease;
+}
+
+.comment_input:focus {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.bit_vote {
+    width: 100px;
+    height: 25px;
+    margin-bottom: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1s, color 1s;
+}
+
+.bit_vote:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: white;
+    color: black;
+}
+
+#text_box {
+    margin-top: 1px;
+}
+
+#select_file {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 1em;
+    padding: 0 20px;
+    margin:25px 0;
+    color: white;
+    transition: color 2s;
+    transition-delay: background-color 1s;
+}
+
+#select_file:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+#send_button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1em;
+    padding: 0 20px;
+    color: white;
+    transition: color 2s;
+    transition-delay: background-color 1s;
+    vertical-align: middle;
+}
+
+#send_button:hover {
+    animation-name: hoverButton;
+    animation-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.post_frame {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s, border-bottom 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post_frame:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.pic_frame {
+    max-width: 500px;
+    max-height: 150px;
+}
+
+.title_frame {
+    margin-left: 20px;
+    font-size: 1.5em;
+    width: 75%;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    overflow: hidden;
+}
+.stat_frame {
+    align-self: flex-end;
+    color: white;
+    font-size: 1.5em;
+}
+
+.script_frame {
+    margin-top: 10px;
+    max-height: 100px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+#all {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.big_boi_content {
+    overflow-x: hidden;
+    width: 48%;
+    height: auto;
+    margin-left: 10px;
+    transition: opacity 0.5s;
+    flex-direction: column;
+}
+
+#comment_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.comments {
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    color: white;
+}
+
+.comment {
+    padding: 10px 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s, border-bottom 0.5s;
+}
+
+.comment:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(225,225,225,1);
+   
+}
+
+@keyframes bigBoiFlex {
+    from {opacity: 0; width: 0%;}
+    to {opacity: 1; width: 48%;}
+}
+
+.big_boi {
+    margin-left: 12.5%;
+    width: 75%;
+    height: auto;
+    border: 1px solid white;
+}
+
+@keyframes uploadFlex {
+    from {height: 0px;}
+    to {height: 210px;}
+}
+
+@keyframes hoverButton {
+    0% {background-image: linear-gradient(-90deg, rgba(0,0,0,0.3) 100%, rgba(255,255,255, 1) 0%);}
+    10% {background-image: linear-gradient(-90deg, rgba(25,25,25,0.4) 90%, rgba(255,255,255, 1) 0%);}
+    20% {background-image: linear-gradient(-90deg, rgba(50,50,50,0.5) 80%, rgba(255,255,255, 1) 20%);}
+    30% {background-image: linear-gradient(-90deg, rgba(75,75,75,0.6) 70%, rgba(255,255,255, 1) 30%);}
+    40% {background-image: linear-gradient(-90deg, rgba(100,100,100,0.7) 60%, rgba(255,255,255, 1) 40%);}
+    50% {background-image: linear-gradient(-90deg, rgba(125,125,125,0.8) 50%, rgba(255,255,255, 1) 50%);}
+    60% {background-image: linear-gradient(-90deg, rgba(150,150,150,0.9) 40%, rgba(255,255,255, 1) 60%);}
+    70% {background-image: linear-gradient(-90deg, rgba(175,175,175,1) 30%, rgba(255,255,255, 1) 70%);}
+    80% {background-image: linear-gradient(-90deg, rgba(200,200,200,1) 20%, rgba(255,255,255, 1) 80%);}
+    90% {background-image: linear-gradient(-90deg, rgba(225,225,225,1) 10%, rgba(255,255,255, 1) 90%);}
+    100% {background-image: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(255,255,255, 1) 100%);}
+}
